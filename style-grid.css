@@ -1,0 +1,151 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Start---Workshop Grid setone!
+/*.grid-container {
+    display: grid;
+    /*grid-template-columns: 3rem 25% 1fr 2fr; /* เป็นการสร้าง columns  option : colums1 column2 column3 ......  ; หน่วยที่เป็น fr เป็นการแบ่ง column ให้มีขนาดเต็มโดยเราไม่ต้องคำนวณเอง นิยมใช้ fr เป็นหน่วย ; หน่วยที่เป็น rem   */
+    /*grid-template-columns: minmax(auto,50%) 200px 3em;/* minmax(เล็กสุด,กว้างสุด) */
+    /*grid-template-columns: repeat(3,1fr); /* repeat คือการทำซ้ำตัวแรกคือการกำหนดกี่ตัว ตัวที่ 2 คือกำหนดขนาด ; repeat(ตัวที่1,ตัวที่2) ; ถ้ามีอะไรนำหน้ามันก็จะทำตัวนำหน้าก่อนแล้วค่อยทำ repeat*/
+    /*grid-template-rows: 50px 100px; /* เป็นการสร้าง columns  option : row1 row2 row3 ...... */
+    /*grid-template-rows: minmax(100px,auto);
+    grid-template-rows: repeat(5,100px);
+    /*grid-column-gap: 10px; /* เป็นการกำหนดช่องว่างระหว่าง column*/
+    /*grid-row-gap: 10px; /*เป็นการกำหนดช่องว่างระหว่าง row */
+    /*grid-gap: 100px 2em; /* เป็นการใช้ทางลัดเพื่อสั่ง grid-row-gap และ column-gap โดย grid-gap: grid-column-gap grid row-gap
+    background: green;
+    padding: 1em;
+    /*grid-template-columns: [col-1-start] 1fr [col-2-start] 1fr [col-3-start] 1fr [col-3-end]; /* เป็นการกำหนดชื่อให้ line แต่ละอัน สามารถทำได้ทั้ง column และ row 
+    grid-template-columns: repeat(3, [col-start] 1fr [col-end]); /* เป็นการตั้งชื่อแบบกรณีใช้ repeat การเรียกใช้ชื่อก็คือ col-start col-start 1 col-start 2 ..... 
+    grid-template-rows: repeat(4,[row-start] 100px [row-end]);
+}*/
+
+/* เป็นการเอาชื่อจากการตั้งมาใช้กำหนด 
+.grid1 {
+    grid-column-start:col-2-start ;
+    grid-column-end: col-3-start;
+}*/
+
+
+/* เป็นการกำหนดตำแหน่งเริ่มต้น เรื่องนี้ต้องเข้าใจ ตำแหน่งของการนับเส้น column และ row เช่นตามตัวอย่างข้างล่างคือการให้ 1 ไปเริ่มที่ตำแหน่งที่ 8 */
+/*.grid1 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    --------------------------
+    grid-column: [grid-column-start] / [grid-column-end];
+    grid-row: [grid-row-start] / [grid-row-end];
+    --------------------------
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    --------------------------
+    grid-area: [grid-row-start] / [grid-column-start] / [grid-row-end] / [grid-column-end]
+    grid-area: 3 / 2 / 4 / 3 ;
+}*/
+
+
+/* เป็นการขยาย item เช่น เราจะขยาย item1 ให้เต็มแถวเลยแล้วให้ 2 3 โดนปัดมาอยู่ข้างล่าง */
+/*.grid1 {
+    grid-column: 1 / 4 ;*/
+    /*grid-row: 1 / 4;*/
+    /*grid-column: span 2;  เป็นการ spanไป2 หรือขยายไปถึง item 2 
+    grid-row: 2 /span 3 ;
+}*/
+
+/*.grid-item {
+    border: 1px solid #fff;
+}*/
+/* End---workshop grid setone
+
+/* Start workshop grid settwo */
+/*เป็นการจัดหน้า Layout แบบง่ายๆ  .grid-container {
+    display: grid;
+    grid-template-areas: "header header"
+                        "content sidebar"
+                        "footer footer";
+    grid-template-columns: 1fr 200px;
+    grid-template-rows: 150px 200px 60px;
+    background: green;
+    padding: 1em;
+}
+
+.header {
+    grid-area: header;
+}
+.content {
+    grid-area: content;
+}
+.sidebar {
+    grid-area: sidebar;
+}
+.footer {
+    grid-area: footer;
+}
+
+.grid {
+    border: 1px solid #fff;
+}*/
+
+/* End workshop grid settwo */
+
+/* Start workshop grid setthree */
+.grid-container {
+    display: grid;
+    /*ทดสอบการซ้อนกันของitem  grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,100px);*/
+
+    /*การจัดตำแหน่ง Start*/
+    /*grid-template-columns: 1fr 1fr;
+    grid-template-rows: 80px 80px;
+    grid-template-areas: "content content"
+                        "content content";
+    align-items: stretch;/*จัดแนวในแกนตั้ง*/
+    /*justify-items: stretch; /* จัดแนวในแกนนอน*/
+    /*การจัดตำแหน่ง End*/
+    /*จัดตำแหน่งแบบ 3 ตัว Start*/
+    grid-template-columns: repeat(3,1fr);
+    /*จัดตำแหน่งแบบ 3 ตัว End*/
+
+    background: green;
+    padding: 1em;
+}
+.grid-item {
+    justify-items: start;
+    border: 1px solid #fff;
+}
+.grid1 {
+    justify-self: start;
+}
+.grid2 {
+    justify-self: center;
+}
+.grid3 {
+    justify-self: end;
+}
+
+/* การจัดตำแหน่งตัวเดียว
+.grid1 {
+    grid-area: content;
+}*/
+
+
+/* เป็นการทับกันระหว่าง item 1 กับ 2 หรือซ้อนกันอยู๋
+.grid1,
+.grid2 {
+    grid-column-end: span 2;
+    grid-row-start: 1;
+}
+
+.grid1 {
+    grid-column-start: 1;
+    z-index: 1;
+    background: rgba(0,0,0,0.4);
+}
+.grid2 {
+    grid-column-start: 2;
+}*/
+/* End workshop grid setthree*/

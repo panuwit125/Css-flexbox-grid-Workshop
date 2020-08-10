@@ -1,0 +1,62 @@
+.flex-container {
+    display: flex;
+    /*flex-direction: row ;/* default ==> row */ /*เป็นการจัดทิศทางของ flex ==> row คือแนวตั้งแบบเรียงในแกนนอน , column คือแนวนอนเรียงในแกนตั้ง , reverse กลับทิศทาง*/ 
+    flex-wrap: wrap; /* default ==> nowrap */  /*คือการจัด responsive แบบถ้ามันขยายหรือหด มันจะดันให้ card หรือ กล่อง ที่เกินไปบรรทัดต่อไป  มี Attibute ทั้งหมดคือ wrap คือการทำให้มันสามารถย้ายบรรทัดได้ nowrap คือไม่สามารถย้ายบรรทัดได้ wrap-reverse คือย้ายบรรทัดได้แต่กลับหัวกลับหาง*/
+    /*flex-flow: row wrap;*/ /*คือการ set ค่าของ flex-direction กับ flex-wrap ด้วยกันภายในคำสั่งเดียว หลักการใช้คือ flex-flow: flex-direction flex-wrap ; */ 
+    /*justify-content: space-between; /*เป็นการจัดตำแหน่งในแนวนอน มี 5 option คือ flex-start center flex-end space-between space-around ตามลำดับ ชิดซ้ายสุด กึ่งกลาง ชิดขวาสุด เป็นการกระจายแบบชิดหน้าชิดหลัง เป็นการกระจายให้เท่ากันแบบเต็ม div */
+    /*align-items: baseline; /*เป็นการจัดตำแหน่งใช้กับ flex-direction : column   option baseline เป็นการจัดตำแหน่งเริ่มต้นของตัวอักษร*/
+    /*align-content: flex-end; /*ต้องใช้กับ flexwrap : wrap */
+    background: red;
+    /*flex: flex-grow , flex-shrink , flex-basis ; เป็นการย่อคำสั่ง 3 อย่างในคำสั่งนี้ */
+}
+
+.flex-item-1, .flex-item-2, .flex-item-3 , .flex-item-4 , .flex-item-5 {
+    width: 150px;
+    height: 150px;
+    background: #ccc;
+    margin:10px;
+}
+
+
+/* เป็นการจัดตำแหน่งให้แตกต่างจากตัวอื่น */
+/*.flex-item-2 {
+    align-self: flex-end; 
+}*/
+
+
+/* flex-basic เป็นการกำหนดค่าเริ่มต้นหรือความกว้าง */
+
+
+/* flex-shrink เป็นการกำหนดขนาดเหมือน flex grow แต่อันนี้ปรับให้มันเล็ก default => 1 การใช้คือกำหนดค่ามากกว่า 0 */
+/*.flex-item-2 {
+    flex-shrink: 2;
+}*/
+
+
+/* flex-grow */
+/*.flex-item-1 {
+    flex-grow: 1;   default => 0 ; ค่ามีแค่ 0 กับ 1 เป็นการจัดความกว้างให้อันที่เรากำหนดมันสามารถโตกว่าอันที่ไม่ได้กำหนดได้กรณีทีเราเปิดหน้าเว็บแบบเต็มจอแล้วมันเหลือพื้นที่วางมันก็จะปรับให้เต็ม 
+}
+.flex-item-3 {
+    flex-grow: 1;
+}*/
+
+
+
+/* order เป็นการใช้เรียงลำดับ การใช้คือต้องกำหนดให้ทั้งหมด*/
+/*.flex-item-1 {
+    order:5;
+}
+.flex-item-2 {
+    order:4;
+}
+.flex-item-3 {
+    order:3;
+}
+.flex-item-4 {
+    order:2;
+}
+.flex-item-5 {
+    order:1;
+}
+*/
